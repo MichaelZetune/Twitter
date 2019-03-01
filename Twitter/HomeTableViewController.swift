@@ -37,7 +37,8 @@ class HomeTableViewController: UITableViewController {
         let myParams = ["count": numberOfTweets] // parameters for the API to process
         
         
-        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams, success: { (tweets: [NSDictionary]) in
+        TwitterAPICaller.client?.getDictionariesRequest(url: myUrl, parameters: myParams,
+        success: { (tweets: [NSDictionary]) in
             
             self.tweetArray.removeAll()
             for tweet in tweets {
